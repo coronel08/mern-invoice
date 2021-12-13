@@ -1,18 +1,23 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SignUp from './pages/signUp';
+import Home from './pages/home';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <div>
-      <h1>Mern Invoice Start</h1>
-      <button onClick={callApi}>Call API</button>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/signUp" element={<SignUp/>} />
+        </Routes>
+      </Router>
+      {/* Add Footer here */}
     </div>
   );
 }
 
-function callApi() {
-  fetch("http://localhost:3001/", { method: "GET" })
-    .then(data => data.json())
-    .then(json => console.log(JSON.stringify(json)))
-}
 
 export default App;
