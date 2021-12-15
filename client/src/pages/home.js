@@ -6,7 +6,8 @@ export default function Home() {
         fetch("http://localhost:3001/", { method: "GET" })
           .then(data => data.json())
           .then(json => console.log(JSON.stringify(json)))
-      }
+          .catch(err => {console.log("Error from fetch Sign Up", err)})
+        }
 
     return (
         <Container>

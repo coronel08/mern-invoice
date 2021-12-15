@@ -42,6 +42,7 @@ docker-compose -f ./database/docker-compose.yml up -d
                 * [] Replace Signup form with grid
             * [] Replace Login with Modal [Modal](https://www.w3schools.com/howto/howto_css_login_form.asp)
     * [x] Setup routing using react-router-dom v6
+    * [] Refractor navbar styles and styled-components ui pages. Need to destructure ex: ```(props.color)``` to ``` ({color})``` 
 * [] Handle Backend ```/server```
     * [] Create User login and signup section
         * [x] Create Signup Form and have it send data to express server [Express and Postman guide](https://iq.opengenus.org/routing-with-express-and-postman/)
@@ -49,7 +50,7 @@ docker-compose -f ./database/docker-compose.yml up -d
         * [] Create login form using signup as example, connect to db as well
     * [] Create User Authentication models and logic in DB
 
-
+* [] fetch catch error in home.js and signup.js console log on error fix that later. After development
 
 ---
 

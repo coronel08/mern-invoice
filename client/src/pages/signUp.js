@@ -28,6 +28,7 @@ export default function SignUp() {
         fetch(url, options)
             .then(res => res.json())
             .then(res => console.log(res))
+            .catch(err => {console.log("Error from fetch Sign Up", err)})
     }
 
     return (
