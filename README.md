@@ -37,17 +37,27 @@ docker-compose -f ./database/docker-compose.yml up -d
     * [] Setup Page layout and template with styled components and css/html
         * [x] Header, install font awesome maybe tailwind
         * [x] Body Rough Draft
-    * [] Setup routing using react-router-dom v6
+        * [] Login Form
+            * [x] Signup form rough draft
+                * [] Replace Signup form with grid
+            * [] Replace Login with Modal [Modal](https://www.w3schools.com/howto/howto_css_login_form.asp)
+    * [x] Setup routing using react-router-dom v6
 * [] Handle Backend ```/server```
     * [] Create User login and signup section
+        * [x] Create Signup Form and have it send data to express server [Express and Postman guide](https://iq.opengenus.org/routing-with-express-and-postman/)
         * [] Interact with Database and model data
-    * [] Create User Authentication
+        * [] Create login form using signup as example, connect to db as well
+    * [] Create User Authentication models and logic in DB
 
 
 
 ---
 
 #### Resources and Links
+
+[MongoDB Docs](https://www.mongodb.com/languages/express-mongodb-rest-api-tutorial)
+
+[React Router Docs v6 Tutorial](https://github.com/remix-run/react-router/blob/main/docs/getting-started/tutorial.md). Breaking changes from v5 to v6. [More Docs](https://reactrouter.com/docs/en/v6/upgrading/v5)
 
 [Mern Setup](https://niruhan.medium.com/creating-a-simple-mern-fullstack-application-2cbcfbdf3940)
 

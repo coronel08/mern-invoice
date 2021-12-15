@@ -1,23 +1,27 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    max-width: 100%;
+    max-width: 80%;
     padding: 1rem 2rem;
     margin: 0 auto;
+
+    @media screen and (min-width: 1200px){
+        max-width: 60%;
+    }
 `;
 
 export const H1 = styled.h1`
     text-align: center;
     color: white;
-`
+`;
+
 
 export const Button = styled.button`
     padding: .7rem 1rem;
-    background-color: white;
+    background-color: ${({color}) => color || "white"};
     margin: 1rem;
     font-weight: bold;
     border-radius: 12px;
-    border
 `;
 
 export const FlexDiv = styled.div`
@@ -28,10 +32,8 @@ export const CenterDiv = styled.div`
     display: flex;
     align-content: center;
     justify-content: center;
+    flex-direction: column;
 `;
-
-
-
 
 // Responsive Col and Row Grid using function
 function getWidthString(span) {

@@ -9,13 +9,14 @@ export default function Navbar() {
             {/* Import head here later like in NextJS */}
             <Nav>
                 <NavButton type="button" onClick={() => setisOpen(!isOpen)}>
-                    <i class="fas fa-bars"></i>
+                    <i className="fas fa-bars"></i>
                 </NavButton>
                 <p>Invoice</p>
 
                 <NavMenu isOpen={isOpen}>
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/signUp">SignUp</NavLink>
+                    <NavLink to="/login">Login</NavLink>
                 </NavMenu>
             </Nav>
         </div>
