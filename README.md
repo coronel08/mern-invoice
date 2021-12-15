@@ -56,6 +56,12 @@ docker-compose -f ./database/docker-compose.yml up -d
 
 #### Resources and Links
 
+* Notes : 
+    * Fetch vs Axios:  can look into doing GET,POST,PUT, DELETE requests from an api or url with these, Fetch is native javascript.
+        * [fetch how to](https://attacomsian.com/blog/using-javascript-fetch-api-to-get-and-post-data) 
+        * [Fetch PUT, POST, DELETE](https://attacomsian.com/blog/javascript-fetch-api)
+    * Promise - 
+
 [MongoDB Docs](https://www.mongodb.com/languages/express-mongodb-rest-api-tutorial)
 
 [React Router Docs v6 Tutorial](https://github.com/remix-run/react-router/blob/main/docs/getting-started/tutorial.md). Breaking changes from v5 to v6. [More Docs](https://reactrouter.com/docs/en/v6/upgrading/v5)
