@@ -18,7 +18,7 @@ export default function SignUp() {
     // Add processing form stuff here for Server
     const handleSubmit = (event) => {
         event.preventDefault();
-        const url = "http://localhost:3001/register"
+        const url = "http://localhost:3001/signup"
         const options = {
             method: "POST",
             body: JSON.stringify(formData),

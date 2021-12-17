@@ -47,7 +47,7 @@ docker-compose -f ./database/docker-compose.yml up -d
                 -   [x] [Redirecting After Login React](https://pretagteam.com/question/what-is-the-correct-way-of-redirecting-after-successful-post-request-in-react) used useNavigate hook from react-router-dom [React-Router-StackOverflow](https://stackoverflow.com/questions/31079081/programmatically-navigate-using-react-router)
             -   [] Replace Login with Modal [Modal](https://www.w3schools.com/howto/howto_css_login_form.asp)
     -   [x] Setup routing using react-router-dom v6
-        -   [] React router v6 use-Navigate redirect signup form to home page on res from server
+        -   [x] React router v6 use-Navigate redirect signup form to home page on res from server, fixed bug
     -   [] Refractor navbar styles and styled-components ui pages. Need to destructure ex: `(props.color)` to ` ({color})`
 -   [] Handle Backend `/server`
     -   [] Create User login and signup section
