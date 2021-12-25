@@ -15,7 +15,7 @@ export default function SignUp() {
         })
     }
 
-    // Add processing form stuff here for Server
+    // Add processing form stuff here for Server, need to extract JWT from response
     const handleSubmit = (event) => {
         event.preventDefault();
         const url = "http://localhost:3001/signup"
@@ -34,7 +34,7 @@ export default function SignUp() {
                 return navigate("/")
                 // window.location = "http://localhost:3000/" navigate to homepage on success, instead used useNavigate hook
             })
-            .catch(err => {console.log("Error from fetch Sign Up", err)})
+            .catch(err => {console.log("Error fetching server from signUp.js page ", err)})
     }
 
     return (

@@ -7,6 +7,7 @@ FrontEnd: React on port 3000
 Database: Dockerized MongoDB Database on port 3008
 
 ---
+
 ## Setup Boilerplate
 
 Ran the commands below to start my development project.
@@ -31,7 +32,9 @@ docker-compose -f ./database/docker-compose.yml up -d
 -   /database = Using Docker and MongoDB
 -   /server = Backend in Express
     -   index.js = Entry Point for express server
-    -   models.js = database modeling
+    -   /models = models that interact with Database
+        -   user
+    -   /routes = logic and routing
 
 ---
 
@@ -50,54 +53,37 @@ docker-compose -f ./database/docker-compose.yml up -d
         -   [x] React router v6 use-Navigate redirect signup form to home page on res from server, fixed bug
     -   [] Refractor navbar styles and styled-components ui pages. Need to destructure ex: `(props.color)` to ` ({color})`
 -   [] Handle Backend `/server`
-    -   [] Create User login and signup section
-    -   [x] Create Signup Form and have it send data to express server [Express and Postman guide](https://iq.opengenus.org/routing-with-express-and-postman/)
-    -   [x] Install bcrypt and hash password before sending to Database
-    -   [] Create DB logic, add if not already in db.
-    -   [x] remove get paths from backend, used for testing purposes
-    -   [] remove "/" route used for retreiving evereything from DB about users
-    -   [x] Add express router, update routes to routes folder and models to models folder
-    -   [x] refractor app.js to use routes in seperate folders.
-    -   [] Create login form using signup as example, connect to db as well
+    -   [x] create example .env and try dev environment
+            `if (process.env.NODE_ENV !== 'production') { require("dotenv").config() } `
     -   [] Create User Authentication models and logic in DB
+    -   [] Create User login and signup section
+        -   [] Signup, doing first
+            -   [x] Create Signup Form and have it send data to express server [Express and Postman guide](https://iq.opengenus.org/routing-with-express-and-postman/)
+            -   [x] Install bcrypt and hash password before sending to Database
+            -   [] Create DB logic, add if not already in db.
+                -   [] Routes user.js create middleware for login authentication
+        -   [] Create login form using signup as example, connect to db as well
+            -   [] Login creates JWT
+    -   [x] remove get paths from backend, used for testing purposes
+    -   [x] Add express router, update routes to routes folder and models to models folder
+        -   [x] refractor app.js to use routes in seperate folders.
     -   [x] Setup .env file and use variables for server,
-    -   create example .env and try dev environment
-        `if (process.env.NODE_ENV !== 'production') { require("dotenv").config() } `
+    -   [] Import JWT and use token for authentication[Digital Ocean tutorial](https://www.digitalocean.com/community/tutorials/nodejs-jwt-expressjs)
+    -   [] remove "/" route used for retreiving evereything from DB about users
 -   [] Database
+
     -   [] Interact with Database and model data
         -   [x] write user login data form from client to backend to Database
             -   [x] data from signup completed
             -   [x] express on login retreive email and send response on server.
 
--   [] fetch catch error in home.js and signup.js console log on error fix that later. After development
-
 ---
 
 #### Resources and Links
 
-Couldnt use ES6 exports in Express. Example:
-
--   `export default` can be named whatever when importing, module.exports need to be called by name on `import {Users} from "file"`
-
-```
-export default function users() {
-    return ()
-}
-
-or
-
-export const user = () = > console.log("test")
-```
-
-would get written as
-
-```
-const Users = () => {
-    const register = console.log("Register Running")
-}
-
-module.exports = Users //can use an object if exporting multiple {}
-```
+-   Quick review of promises (then or try -> catch) vs async await [async await](https://itnext.io/error-handling-with-async-await-in-js-26c3f20bc06a) and [async await another article](https://www.robinwieruch.de/javascript-async-await-without-try-catch/)
+-   Exports, Couldnt use ES6 exports in Express.
+    Example:`export default` can be named whatever when importing, module.exports need to be called by name on `import {Users} from "file"`
 
 -   Notes :
     -   Fetch vs Axios: can look into doing GET,POST,PUT, DELETE requests from an api or url with these, Fetch is native javascript.
@@ -116,3 +102,11 @@ module.exports = Users //can use an object if exporting multiple {}
 [Mern Setup](https://niruhan.medium.com/creating-a-simple-mern-fullstack-application-2cbcfbdf3940)
 
 [Inspo](https://dev.to/panshak/i-created-a-full-stack-invoicing-application-using-the-mern-stack-27mp) and [Git](https://github.com/Panshak/arcinvoice)
+
+
+**AUTH**
+[Auth Tutorial for Express](https://www.codingdeft.com/posts/react-authentication-mern-node-passport-express-mongo/)
+
+[Dont Store JWT in Local Storage ](https://www.rdegges.com/2018/please-stop-using-local-storage/)
+
+[JWT in REACT ](https://hasura.io/blog/best-practices-of-using-jwt-with-graphql/)

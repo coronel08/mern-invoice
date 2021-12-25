@@ -29,7 +29,7 @@ module.exports = db
 
 
 // Routes
-app.use("/", require ("./routes/users"))
+app.use("/", require ("./routes/usersRoutes"))
 
 // Catch all, keep at end of file
 app.get("*", (req,res) => {

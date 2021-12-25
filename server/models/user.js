@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-// Define Schema for DB
-const userSchema = new mongoose.Schema({
+// Define Schema for DB, hashed password stored
+const UserSchema = new Schema({
     email: {
         type: String,
         required: true,
@@ -11,18 +11,16 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    // Hashed password below
     password: {
         type: String,
         required: true,
     },
     date: {
         type: Date,
-        default: Date.now
-    }
-
-
+        default: Date.now,
+    },
 })
 
-const User = mongoose.model('User', userSchema)
+
+const User = mongoose.model('User', UserSchema)
 module.exports = User
