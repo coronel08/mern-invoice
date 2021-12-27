@@ -105,7 +105,11 @@ docker-compose -f ./database/docker-compose.yml up -d
 
 
 **AUTH**
-[Auth Tutorial for Express](https://www.codingdeft.com/posts/react-authentication-mern-node-passport-express-mongo/)
+[Digital Ocean Express JWT](https://www.digitalocean.com/community/tutorials/nodejs-jwt-expressjs)
+
+[Auth Tutorial for Express](https://www.codingdeft.com/posts/react-authentication-mern-node-passport-express-mongo/) or [Medium Store JWT in cookie](https://medium.com/@ryanchenkie_40935/react-authentication-how-to-store-jwt-in-a-cookie-346519310e81) or [JWT refresh Token Node Mongo](https://www.bezkoder.com/jwt-refresh-token-node-js-mongodb/)
+
+[SPA authentication](https://andrejgajdos.com/authenticating-users-in-single-page-applications-using-node-passport-react-and-redux/) or [Passport JWT](https://www.mokuji.me/article/passport-jwt-react)
 
 [Dont Store JWT in Local Storage ](https://www.rdegges.com/2018/please-stop-using-local-storage/)
 
