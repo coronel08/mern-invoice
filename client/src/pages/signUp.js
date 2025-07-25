@@ -16,8 +16,8 @@ export default function SignUp() {
     }
 
     // Add processing form stuff here for Server, need to extract JWT from response
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    const handleSubmit = (e) => {
+        e.preventDefault();
         const url = "http://localhost:3001/signup"
         const options = {
             method: "POST",

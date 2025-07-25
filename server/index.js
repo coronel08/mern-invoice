@@ -42,4 +42,4 @@ app.get("*", (req,res) => {
 
 
 // Run App
-app.listen(process.env.SERVER_PORT, () => console.log(`Running on ${process.env.serverPort}`))
+app.listen(process.env.SERVER_PORT, () => console.log(`Running on ${process.env.SERVER_PORT}`))

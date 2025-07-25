@@ -114,3 +114,5 @@ docker-compose -f ./database/docker-compose.yml up -d
 [Dont Store JWT in Local Storage ](https://www.rdegges.com/2018/please-stop-using-local-storage/)
 
 [JWT in REACT ](https://hasura.io/blog/best-practices-of-using-jwt-with-graphql/)
+
+[React Router example Auth](https://v5.reactrouter.com/web/example/auth-workflow)
